@@ -1302,6 +1302,11 @@ h6 {
   background-color: transparent;
   color: black;
 }
+@media (max-width: 450px) {
+  .form_controls .button {
+    padding: 16px 10px;
+  }
+}
 
 .file_label {
   background: #FFFFFF;
