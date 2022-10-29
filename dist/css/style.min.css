@@ -116,6 +116,10 @@ h6 {
   color: white;
   transition: 300ms;
 }
+.button.transparent {
+  background-color: transparent;
+  color: black;
+}
 @media (any-hover: hover) {
   .button:hover {
     transform: scale(1.03);
@@ -126,6 +130,16 @@ h6 {
   font-size: 48px;
   font-weight: 600;
   line-height: 120.8333333333%;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 38px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
 }
 
 .header {
@@ -683,19 +697,10 @@ h6 {
   height: 100%;
 }
 
-@media (max-width: 590px) {
-  .main-block__image {
-    top: 25%;
-    left: 0;
-  }
-}
 .service_inner {
   margin-top: 100px;
 }
 .service_title {
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 120.8333333333%;
   margin-bottom: 35px;
 }
 .service_item-top {
@@ -706,8 +711,14 @@ h6 {
   align-items: center;
   position: relative;
   grid-gap: 20px;
-  min-height: 42px;
+  margin: 8px 0;
   transition: 500ms;
+  padding-right: 40px;
+}
+@media (max-width: 500px) {
+  .service_item-top {
+    margin: 10px 0;
+  }
 }
 .service_item-top::after {
   content: "";
@@ -738,12 +749,18 @@ h6 {
   letter-spacing: 0.01em;
   line-height: 162.5%;
   color: #4B4B4B;
+  padding: 0 40px;
   cursor: auto;
   background: #FFFFFF;
   border-radius: 16px;
   height: 0;
   overflow: hidden;
   transition: 300ms;
+}
+@media (max-width: 768px) {
+  .service_item-content {
+    padding: 0 24px;
+  }
 }
 .service_item-content ol li {
   list-style: none;
@@ -755,7 +772,7 @@ h6 {
 .service_item-content ul li::before {
   content: "";
   position: absolute;
-  top: 43%;
+  top: 11px;
   left: 8px;
   width: 4px;
   height: 4px;
@@ -769,8 +786,24 @@ h6 {
   line-height: 133.3333333333%;
   margin-bottom: 24px;
 }
+@media (max-width: 768px) {
+  .service_item-title {
+    font-size: 20px;
+  }
+}
 .service_item-button {
   margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 500px) {
+  .service_item-button {
+    margin-top: 40px;
+  }
+  .service_item-button .button {
+    width: 100%;
+  }
 }
 .service_item {
   cursor: pointer;
@@ -781,11 +814,15 @@ h6 {
 .service_item.active .service_item-content {
   padding: 40px;
 }
+@media (max-width: 768px) {
+  .service_item.active .service_item-content {
+    padding: 24px;
+  }
+}
 .service_item.active .service_item-top {
   font-size: 26px;
   color: #EF7728;
   text-decoration: underline;
-  min-height: 53px;
   margin-bottom: 30px;
 }
 .service_item.active .service_item-top::after {
@@ -799,6 +836,16 @@ h6 {
   height: 2.5px;
   top: 49%;
   background: #EF7728;
+}
+@media (max-width: 768px) {
+  .service_item.active .service_item-top {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .service_item.active .service_item-top {
+    margin-bottom: 20px;
+  }
 }
 .service_item-img img {
   width: 28px;
@@ -818,6 +865,18 @@ h6 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 32px;
+}
+@media (max-width: 1100px) {
+  .objects_items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .objects_items {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }
 .objects_item {
   width: 100%;
@@ -847,9 +906,14 @@ h6 {
     filter: none;
   }
 }
+@media (max-width: 1100px) {
+  .objects_item:last-child {
+    grid-column: 2/3;
+  }
+}
 .objects_name {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.200000003px;
   line-height: 133.3333333333%;
@@ -861,6 +925,16 @@ h6 {
   left: 0;
   width: 100%;
   z-index: 2;
+}
+@media (max-width: 500px) {
+  .objects_name {
+    font-size: 16px;
+    bottom: 8px;
+    left: 0;
+    padding: 0 8px;
+    transform: none;
+    text-align: left;
+  }
 }
 
 .work {
@@ -892,6 +966,39 @@ h6 {
   width: 60%;
   transform: translateY(-50%);
 }
+@media (max-width: 550px) {
+  .work_item.big .work_item-text {
+    top: 24px;
+    padding: 0 0 0 24px;
+    transform: none;
+    width: 100%;
+  }
+  .work_item.big .work_item-img {
+    bottom: 0 !important;
+    transform: none !important;
+    max-width: 60% !important;
+    max-height: 260px;
+  }
+  .work_item.big:last-child {
+    min-height: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .work_item {
+    grid-column: span 3;
+  }
+  .work_item:last-child {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 700px) {
+  .work_item {
+    grid-column: span 6;
+  }
+  .work_item.big {
+    grid-column: span 6;
+  }
+}
 .work_item-img {
   position: absolute;
   width: 100%;
@@ -911,6 +1018,18 @@ h6 {
   letter-spacing: 0.01em;
   line-height: 144.4444444444%;
   color: #4B4B4B;
+}
+.work_item-text span {
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+@media (max-width: 550px) {
+  .work_item-text {
+    padding: 0 24px;
+    top: 24px;
+  }
 }
 
 .form_inner {
@@ -982,9 +1101,20 @@ h6 {
   width: 100%;
   margin-bottom: 73px;
 }
+@media (max-width: 768px) {
+  .form_row {
+    display: block;
+  }
+}
 .form_column {
   max-width: 546px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .form_column {
+    max-width: none;
+    margin-bottom: 40px;
+  }
 }
 .form_label {
   font-size: 24px;
@@ -994,11 +1124,26 @@ h6 {
   line-height: 133.3333333333%;
   margin-bottom: 40px;
 }
+@media (max-width: 1024px) {
+  .form_label {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .form_label {
+    margin-bottom: 25px;
+  }
+}
 .form_items {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
+}
+@media (max-width: 1024px) {
+  .form_items {
+    grid-template-columns: 1fr;
+  }
 }
 .form_item {
   cursor: pointer;
@@ -1237,6 +1382,12 @@ h6 {
   gap: 50px;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .project_inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 .project_title {
   color: #FFFFFF;
   max-width: 546px;
@@ -1279,6 +1430,11 @@ h6 {
   align-items: center;
   gap: 21px;
 }
+@media (max-width: 768px) {
+  .project_bottom {
+    padding: 0 15px;
+  }
+}
 .project_bottom-delim {
   background: #FFFFFF;
   height: 1px;
@@ -1288,6 +1444,11 @@ h6 {
 }
 .project_bottom-delim:last-child {
   flex: 1 1 auto;
+}
+@media (max-width: 768px) {
+  .project_bottom-delim:first-child {
+    display: none;
+  }
 }
 .project_bottom-button .button {
   background-color: transparent;
