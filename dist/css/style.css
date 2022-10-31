@@ -1043,7 +1043,7 @@ h6 {
 }
 @media (max-width: 500px) {
   .form_title {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
   }
 }
 .form_top {
@@ -1418,6 +1418,7 @@ h6 {
 @media (max-width: 768px) {
   .quiz.form_inner {
     padding-bottom: 90px;
+    padding-top: 60px;
   }
 }
 .quiz .form_block {
