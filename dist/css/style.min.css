@@ -1309,6 +1309,7 @@ h6 {
   align-items: center;
   gap: 17px;
   padding: 0 14px;
+  cursor: pointer;
 }
 .form_file-item:not(:last-child) {
   margin-bottom: 32px;
@@ -1332,6 +1333,12 @@ h6 {
   color: #7F7F7F;
   line-height: 137.5%;
   flex: 1 1 auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .form_controls {
   display: flex;
@@ -1400,7 +1407,12 @@ h6 {
 }
 .quiz.form_inner {
   height: 100vh;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .quiz.form_inner {
+    padding-bottom: 90px;
+  }
 }
 .quiz .form_block {
   padding-right: 10px !important;
