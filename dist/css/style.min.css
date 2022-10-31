@@ -1429,10 +1429,6 @@ h6 {
   max-width: 910px;
   margin: 0 auto 67px;
 }
-.quiz .form_top-item:last-child.active::after {
-  background: transparent;
-  border: 1px solid #EF7728;
-}
 .quiz .container {
   max-width: 1094px;
 }
